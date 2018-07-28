@@ -1,0 +1,42 @@
+.background-top {
+    background-image: url(../img/party.jpg);
+    background-size: cover;
+    background-position: center top;
+    height: 100%;
+    min-height: 800px;
+    .header {
+        background: rgba(0, 133, 69, 0.8);
+
+        &-social {
+            height: 85px;
+        }
+    }
+}
+
+.contest {
+    background-image: url(../img/camera.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    min-height: 700px;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contest {
+    &-capturing {
+        font-size: 5rem;
+    }
+}
+
+.contact {
+    background-image: url(../img/lake.jpg);
+    background-size: cover;
+    height: 100%;
+    min-height: 700px;
+}
