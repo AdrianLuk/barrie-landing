@@ -14,13 +14,13 @@ var gulp = require("gulp"),
     // 1 * = ALL files in current directory
     // 2 ** = ALL files in this directory and ALL sub-directories
     input = {
-        sass: "scss/*.scss",
-        javascript: "js/*.js"
+        sass: "scss/*.scss"
+        // javascript: "js/*.js"
     },
     // These are the directories where we are sending files to
     output = {
-        style: "css",
-        javascript: "js"
+        style: "css"
+        // javascript: "js"
     };
 
 // Compile and minify Foundation SCSS files
@@ -79,24 +79,24 @@ gulp.task("build-css", function() {
 });
 
 // Compile and minify JS files
-gulp.task("build-javascript", function() {
-    return (
-        gulp
-            .src(input.javascript)
-            // Minify JS
-            .pipe(uglify())
-            // Merge and rename JS
-            .pipe(concat("bundle.js"))
-            // Export to JS out directory
-            .pipe(gulp.dest(output.javascript))
-    );
-});
+// gulp.task("build-javascript", function() {
+//     return (
+//         gulp
+//             .src(input.javascript)
+//             // Minify JS
+//             .pipe(uglify())
+//             // Merge and rename JS
+//             .pipe(concat("bundle.js"))
+//             // Export to JS out directory
+//             .pipe(gulp.dest(output.javascript))
+//     );
+// });
 
 // Watch these files for changes and run the task on update
 gulp.task("watch", function() {
     // gulp.watch(input.foundation_sass, ['build-foundation']);
     gulp.watch(input.sass, ["build-css"]);
-    gulp.watch(input.javascript, ["build-javascript"]);
+    // gulp.watch(input.javascript, ["build-javascript"]);
 });
 
 // Run the watch task when gulp is called without arguments
